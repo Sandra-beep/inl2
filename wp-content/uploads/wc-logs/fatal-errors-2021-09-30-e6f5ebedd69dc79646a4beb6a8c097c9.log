@@ -1,0 +1,36 @@
+2021-09-30T08:51:22+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-content/plugins/plugin_remove/index.php on line 7 and at least 2 expected in /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/plugin.php:561
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-content/plugins/plugin_remove/index.php(7): remove_action('my_hook')
+#1 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/class-wp-hook.php(303): remove('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/general-template.php(3015): do_action('wp_head')
+#5 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-content/themes/inl2_Sandras-Tema/header.php(18): wp_head()
+#6 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/template.php(770): require_once('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/template.php(716): load_template('/Applications/X...', true, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-content/themes/storefront/page.php(13): get_header()
+#10 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/template-loader.php(106): include('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-blog-header.php(19): require_once('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/index.php(17): require('/Applications/X...')
+#13 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/plugin.php on line 561
+
+2021-09-30T08:51:40+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-content/plugins/plugin_remove/index.php on line 7 and at least 2 expected in /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/plugin.php:561
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-content/plugins/plugin_remove/index.php(7): remove_action('my_hook')
+#1 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/class-wp-hook.php(303): remove('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/general-template.php(3015): do_action('wp_head')
+#5 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-content/themes/inl2_Sandras-Tema/header.php(18): wp_head()
+#6 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/template.php(770): require_once('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/template.php(716): load_template('/Applications/X...', true, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-content/themes/storefront/page.php(13): get_header()
+#10 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/template-loader.php(106): include('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-blog-header.php(19): require_once('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/index.php(17): require('/Applications/X...')
+#13 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/labb2_Sandra-Rivas/wp-includes/plugin.php on line 561
+

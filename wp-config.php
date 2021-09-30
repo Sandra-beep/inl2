@@ -39,7 +39,8 @@ define( 'DB_COLLATE', '' );
 
 define('FS_METHOD','direct');
 
-define('WP_MEMORY_LIMIT', '256M');
+// define('WP_MEMORY_LIMIT', '256M');
+
 
 /**#@+
  * Authentication unique keys and salts.
