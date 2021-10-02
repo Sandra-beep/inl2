@@ -3,8 +3,11 @@
 function childtheme_parent_styles() {
  
  // enqueue style
- wp_enqueue_style( 'parent', get_template_directory_uri().'/style.css' );                       
+ wp_enqueue_style( 'parent', get_template_directory_uri().'/style.css' );
+ wp_enqueue_style('custom', get_stylesheet_directory_uri() . '/css/custom.css', array(), '0.1.0', 'all');
+                    
 }
+
 add_action( 'wp_enqueue_scripts', 'childtheme_parent_styles');
 
 
@@ -20,8 +23,6 @@ add_filter('get_the_archive_title', 'my_get_the_archive_title' );
 function my_get_the_archive_title( $title ) {
     return '';
 };
-
-
 
 
 // Our custom post type function
@@ -116,6 +117,7 @@ add_action( 'init', 'custom_post_type', 0 );
 
 // Lägga till texten "Short info"
 add_action('woocommerce_single_product_summary', 'text');
+
 function text() {
     echo 'Short info:';
 }
