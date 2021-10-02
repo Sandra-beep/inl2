@@ -10,23 +10,33 @@ add_action( 'wp_enqueue_scripts', 'childtheme_parent_styles');
 
 // Min egna action med krok och funktion, vid aktivering så försvinner dennna
 add_action('my_hook', 'my_function');
+
 function my_function() {
     echo 'random text som kommer synas när plugin är ej aktiverat';
 }
 
+//Ska ta bort Archive titeln i början av Stores sidan test
+add_filter('get_the_archive_title', 'my_get_the_archive_title' );
+function my_get_the_archive_title( $title ) {
+    return '';
+};
+
+
+
+
 // Our custom post type function
 function create_posttype() {
  
-    register_post_type( 'movies',
+    register_post_type( 'Stores',
     // CPT Options
         array(
             'labels' => array(
-                'name' => __( 'Movies' ),
-                'singular_name' => __( 'Movie' )
+                'name' => __( 'Stores' ),
+                'singular_name' => __( 'Store' )
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'movies'),
+            'rewrite' => array('slug' => 'Stores'),
             'show_in_rest' => true,
  
         )
@@ -42,28 +52,28 @@ add_action( 'init', 'create_posttype' );
  
 function custom_post_type() {
  
-    // Set UI labels for Custom Post Type
+    // Set UI labels for Custom Post Type for Butiker
         $labels = array(
-            'name'                => _x( 'Movies', 'Post Type General Name', 'twentytwenty' ),
-            'singular_name'       => _x( 'Movie', 'Post Type Singular Name', 'twentytwenty' ),
-            'menu_name'           => __( 'Movies', 'twentytwenty' ),
-            'parent_item_colon'   => __( 'Parent Movie', 'twentytwenty' ),
-            'all_items'           => __( 'All Movies', 'twentytwenty' ),
-            'view_item'           => __( 'View Movie', 'twentytwenty' ),
-            'add_new_item'        => __( 'Add New Movie', 'twentytwenty' ),
+            'name'                => _x( 'Stores', 'Post Type General Name', 'twentytwenty' ),
+            'singular_name'       => _x( 'Store', 'Post Type Singular Name', 'twentytwenty' ),
+            'menu_name'           => __( 'Stores', 'twentytwenty' ),
+            'parent_item_colon'   => __( 'Parent Store', 'twentytwenty' ),
+            'all_items'           => __( 'All Stores', 'twentytwenty' ),
+            'view_item'           => __( 'View Store', 'twentytwenty' ),
+            'add_new_item'        => __( 'Add New Store', 'twentytwenty' ),
             'add_new'             => __( 'Add New', 'twentytwenty' ),
-            'edit_item'           => __( 'Edit Movie', 'twentytwenty' ),
-            'update_item'         => __( 'Update Movie', 'twentytwenty' ),
-            'search_items'        => __( 'Search Movie', 'twentytwenty' ),
+            'edit_item'           => __( 'Edit Store', 'twentytwenty' ),
+            'update_item'         => __( 'Update Store', 'twentytwenty' ),
+            'search_items'        => __( 'Search Store', 'twentytwenty' ),
             'not_found'           => __( 'Not Found', 'twentytwenty' ),
             'not_found_in_trash'  => __( 'Not found in Trash', 'twentytwenty' ),
         );
          
-    // Set other options for Custom Post Type
+    // Set other options for Custom Post Type for Butiker
          
         $args = array(
-            'label'               => __( 'movies', 'twentytwenty' ),
-            'description'         => __( 'Movie news and reviews', 'twentytwenty' ),
+            'label'               => __( 'Stores', 'twentytwenty' ),
+            'description'         => __( 'Store news and reviews', 'twentytwenty' ),
             'labels'              => $labels,
             // Features this CPT supports in Post Editor
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
@@ -90,7 +100,7 @@ function custom_post_type() {
         );
          
         // Registering your Custom Post Type
-        register_post_type( 'movies', $args );
+        register_post_type( 'Stores', $args );
      
     }
      
@@ -104,8 +114,8 @@ function custom_post_type() {
 add_action( 'init', 'custom_post_type', 0 );
 
 
-// Lägga till texten "produktinformation"
+// Lägga till texten "Short info"
 add_action('woocommerce_single_product_summary', 'text');
 function text() {
-    echo 'Produktinformation:';
+    echo 'Short info:';
 }
